@@ -1,0 +1,115 @@
+{
+  "actions": [
+    {
+      "type": "alterTable",
+      "alterTable": {
+        "name": "tag",
+        "schema": "public",
+        "addColumns": [
+          {
+            "name": "users",
+            "columnType": 8,
+            "isNullable": true,
+            "dartType": "List<protocol:User>?"
+          }
+        ],
+        "deleteColumns": [
+          "_userTagsUserId"
+        ],
+        "modifyColumns": [],
+        "addIndexes": [],
+        "deleteIndexes": [],
+        "addForeignKeys": [],
+        "deleteForeignKeys": [
+          "tag_fk_0"
+        ],
+        "warnings": [
+          {
+            "type": "columnDropped",
+            "message": "Column \"_userTagsUserId\" of table \"tag\" will be dropped.",
+            "table": "tag",
+            "columns": [
+              "_userTagsUserId"
+            ],
+            "destrucive": true
+          },
+          {
+            "type": "columnDropped",
+            "message": "Column \"_tagUsersTagId\" of table \"user\" will be dropped.",
+            "table": "user",
+            "columns": [
+              "_tagUsersTagId"
+            ],
+            "destrucive": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "alterTable",
+      "alterTable": {
+        "name": "user",
+        "schema": "public",
+        "addColumns": [
+          {
+            "name": "tags",
+            "columnType": 8,
+            "isNullable": true,
+            "dartType": "List<protocol:Tag>?"
+          }
+        ],
+        "deleteColumns": [
+          "_tagUsersTagId"
+        ],
+        "modifyColumns": [],
+        "addIndexes": [],
+        "deleteIndexes": [],
+        "addForeignKeys": [],
+        "deleteForeignKeys": [
+          "user_fk_0"
+        ],
+        "warnings": [
+          {
+            "type": "columnDropped",
+            "message": "Column \"_userTagsUserId\" of table \"tag\" will be dropped.",
+            "table": "tag",
+            "columns": [
+              "_userTagsUserId"
+            ],
+            "destrucive": true
+          },
+          {
+            "type": "columnDropped",
+            "message": "Column \"_tagUsersTagId\" of table \"user\" will be dropped.",
+            "table": "user",
+            "columns": [
+              "_tagUsersTagId"
+            ],
+            "destrucive": true
+          }
+        ]
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "type": "columnDropped",
+      "message": "Column \"_userTagsUserId\" of table \"tag\" will be dropped.",
+      "table": "tag",
+      "columns": [
+        "_userTagsUserId"
+      ],
+      "destrucive": true
+    },
+    {
+      "type": "columnDropped",
+      "message": "Column \"_tagUsersTagId\" of table \"user\" will be dropped.",
+      "table": "user",
+      "columns": [
+        "_tagUsersTagId"
+      ],
+      "destrucive": true
+    }
+  ],
+  "migrationApiVersion": 1
+}

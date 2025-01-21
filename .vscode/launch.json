@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Dart Server with Migrations",
+            "type": "dart",
+            "request": "launch",
+            "program": "serverpod_challenge/serverpod_challenge_server/bin/main.dart",
+            "args": [
+                "--apply-migrations"
+            ]
+        }
+    ]
+}

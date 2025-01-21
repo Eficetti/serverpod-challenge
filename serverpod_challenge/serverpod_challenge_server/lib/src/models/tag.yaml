@@ -1,0 +1,9 @@
+class: Tag
+table: tag
+
+fields:
+  name: String
+  image: String?, default='default.jpg'
+  createdAt: DateTime
+  updatedAt: DateTime
+  users: List<UserTag>?, relation(name=tag_user_tag)

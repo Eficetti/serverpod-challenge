@@ -1,0 +1,16 @@
+example:
+  - hello:
+tag:
+  - create:
+  - update:
+  - delete:
+  - getById:
+  - getAll:
+user:
+  - create:
+  - getAll:
+  - delete:
+  - update:
+  - getUserById:
+  - addTag:
+  - removeTag:

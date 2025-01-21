@@ -1,0 +1,9 @@
+class: UserTag
+table: user_tag
+fields:
+  user: User?, relation(name=user_user_tag)
+  tag: Tag?, relation(name=tag_user_tag)
+  createdAt: DateTime
+indexes:
+  user_tag_idx:
+    fields: userId, tagId

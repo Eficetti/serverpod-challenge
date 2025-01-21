@@ -1,0 +1,5 @@
+exception: ChallengeException
+
+fields:
+  message: String
+  debugLog: String?

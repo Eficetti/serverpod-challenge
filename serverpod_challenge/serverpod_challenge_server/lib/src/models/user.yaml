@@ -1,0 +1,10 @@
+class: User
+table: user
+
+fields:
+  name: String
+  email: String
+  address: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  tags: List<UserTag>?, relation(name=user_user_tag)
